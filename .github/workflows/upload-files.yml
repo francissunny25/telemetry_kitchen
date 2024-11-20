@@ -25,7 +25,7 @@ jobs:
         FILE_PATH: ${{ github.event.inputs.file_path }}
 
     - name: Archive and upload artifact
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v4
       with:
         name: uploaded-file
         path: upload/
