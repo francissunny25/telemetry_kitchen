@@ -1,4 +1,3 @@
-
 name: Upload File
 
 on:
@@ -10,7 +9,7 @@ on:
 
 jobs:
   upload:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
 
     steps:
     - name: Checkout repository
@@ -19,8 +18,8 @@ jobs:
     - name: Upload file
       run: |
         echo "Uploading file from path: ${{ github.event.inputs.file_path }}"
-        mkdir -p upload
-        cp ${{ github.event.inputs.file_path }} upload/
+        mkdir upload
+        copy ${{ github.event.inputs.file_path }} upload\
       env:
         FILE_PATH: ${{ github.event.inputs.file_path }}
 
