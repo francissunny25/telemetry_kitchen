@@ -24,7 +24,6 @@ jobs:
       uses: actions/checkout@v2
 
     - name: Set configuration
-      run: echo "Config selected: ${{ github.event.inputs.config }}"
 
     - name: Download file from SharePoint
       env:
